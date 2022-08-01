@@ -1,0 +1,16 @@
+{
+  "name": "testwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up",
+    "stop": "docker-compose down"
+  },
+  "keywords": [],
+  "author": "Nevostruev Sergei",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

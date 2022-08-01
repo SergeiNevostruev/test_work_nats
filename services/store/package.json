@@ -1,0 +1,28 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "ts-node-dev index.ts",
+    "migration_gen": "npx ts-node ./node_modules/typeorm/cli migration:generate models/database/migrations/${name} -d ./ormconfig.ts",
+    "migration_create": "npx ts-node ./node_modules/typeorm/cli migration:create models/database/migrations/${name}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.6.3",
+    "@types/pg": "^8.6.5",
+    "pg": "^8.7.3",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "nats": "^2.7.1",
+    "typeorm": "^0.3.7"
+  }
+}
