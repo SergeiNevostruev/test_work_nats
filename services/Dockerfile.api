@@ -1,0 +1,15 @@
+FROM node:16.13-alpine
+
+COPY ./services/lib ./lib
+
+WORKDIR /api
+
+COPY ./services/api/package*.json ./
+
+RUN npm install
+
+COPY ./services/api .
+
+ENV NATS_HOST="nats://nats:4222"
+
+CMD [ "npm", "run", "start"]

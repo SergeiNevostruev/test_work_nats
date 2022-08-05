@@ -1,5 +1,5 @@
 export default {
-  apiHost: "localhost",
+  apiHost: "0.0.0.0",
   apiPort: 5000,
   natsName: "api",
   natsHost: "localhost",

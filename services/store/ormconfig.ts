@@ -1,10 +1,10 @@
 import { DataSource } from "typeorm";
 import * as dotenv from "dotenv";
-// dotenv.config();
+dotenv.config();
 
 export default new DataSource({
   type: "postgres",
-  host: "0.0.0.0",
+  host: process.env.POSTGRES_HOST || "0.0.0.0",
   port: 5432,
   username: "developer",
   password: "developer",

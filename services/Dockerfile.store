@@ -1,0 +1,16 @@
+FROM node:16.13-alpine
+
+COPY ./services/lib ./lib
+
+WORKDIR /store
+
+COPY ./services/store/package*.json ./
+
+RUN npm install
+
+COPY ./services/store .
+
+ENV NATS_HOST="nats://nats:4222"
+ENV POSTGRES_HOST="db_postgres"
+
+CMD [ "npm", "run", "start"]

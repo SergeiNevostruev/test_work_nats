@@ -2,13 +2,14 @@ import * as Nats from "nats";
 import { TestContract } from "../lib/contracts";
 import testController from "./controllers/testController";
 import db from "./ormconfig";
+import dotenv from "dotenv";
+dotenv.config();
 
 console.log("[STORE]: Привет я - STORE!");
 
 const option: Nats.ConnectionOptions = {
   name: "store",
-  // servers: 'localhost',
-  port: 4222,
+  servers: process.env.NATS_HOST,
 };
 
 const subscribeName = "store";

@@ -24,14 +24,14 @@ const init = async (): Promise<void> => {
     console.log(
       "Server running on %s://%s:%s",
       server.info.protocol,
-      server.info.address,
+      "localhost",
       server.info.port
     );
 
     console.log(
       "Documentation running on %s://%s:%s/documentation",
       server.info.protocol,
-      server.info.address,
+      "localhost",
       server.info.port
     );
   });
